@@ -36,8 +36,8 @@
 
 <p>HackerTray is a simple <a href="https://news.ycombinator.com/">Hacker News</a> Linux application
 that lets you view top HN stories in your System Tray. It relies on appindicator, so
-it is not guaranteed to work on all systems. It also provides a StatusIcon fallback 
-but it has not been tested.</p>
+it is not guaranteed to work on all systems. It also provides a Gtk StatusIcon fallback
+in case AppIndicator is not available.</p>
 
 <p>The inspiration for this came from <a href="http://hackerbarapp.com">Hacker Bar</a>, which is 
 Mac-only. I tried to port it to <code>node-webkit</code>, but had to do it in Python instead
@@ -73,6 +73,17 @@ access it via: </p>
 if you are running OpenBox. <a href="http://imgur.com/mnhIzDK">Here</a> is how the 
 configuration should look like in Ubuntu and its derivatives.</p>
 
+<h3>
+<a name="upgrade" class="anchor" href="#upgrade"><span class="octicon octicon-link"></span></a>Upgrade</h3>
+
+<p>The latest stable version is always the one <a href="https://pypi.python.org/pypi/hackertray/">available on pip</a>.
+You can check which version you have installed with <code>pip freeze | grep hackertray</code>.</p>
+
+<p>To upgrade, run <code>pip install -U hackertray</code>. In some cases (Ubuntu), you might
+need to clear the pip cache before upgrading:</p>
+
+<p><code>sudo rm -rf /tmp/pip-build-root/hackertray</code></p>
+
 <h2>
 <a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
 
@@ -91,9 +102,15 @@ configuration should look like in Ubuntu and its derivatives.</p>
 <a name="author-information" class="anchor" href="#author-information"><span class="octicon octicon-link"></span></a>Author Information</h2>
 
 <ul>
-<li>Abhay Rana <a href="mailto:me@captnemo.in">me@captnemo.in</a>
-</li>
+<li>Abhay Rana (<a href="mailto:me@captnemo.in">me@captnemo.in</a>)</li>
 </ul><h2>
+<a name="donating" class="anchor" href="#donating"><span class="octicon octicon-link"></span></a>Donating</h2>
+
+<p>Support this project and <a href="https://www.gittip.com/captn3m0/">others by captn3m0</a> via <a href="https://www.gittip.com/captn3m0/">gittip</a>.</p>
+
+<p><a href="https://www.gittip.com/captn3m0/"><img src="https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png" alt="Support via Gittip"></a></p>
+
+<h2>
 <a name="licence" class="anchor" href="#licence"><span class="octicon octicon-link"></span></a>Licence</h2>
 
 <p>Licenced under the MIT Licence</p>
