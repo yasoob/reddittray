@@ -47,7 +47,7 @@ need to clear the pip cache before upgrading:
 `sudo rm -rf /tmp/pip-build-root/reddittray`
 
 ##Features
-1. Minimalist Approach to HN
+1. Minimalist Approach to Reddit
 2. Opens links in your default browser
 3. Remembers which links you opened
 4. Shows Points/Comment count in a simple format
