@@ -3,65 +3,62 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>Hackertray by captn3m0</title>
+
+    <title>Reddittray by yasoob</title>
   </head>
 
   <body>
-    <div id="container">
+    <header>
       <div class="inner">
+        <h1>Reddittray</h1>
+        <h2>Reddit Tray is a minimalist Reddit app for Linux</h2>
+        <a href="https://github.com/yasoob/reddittray" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
 
-        <header>
-          <h1>Hackertray</h1>
-          <h2>Hacker Tray is a minimalist Hacker News app for Linux</h2>
-        </header>
-
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/captn3m0/hackertray/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/captn3m0/hackertray/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/captn3m0/hackertray" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
           <h1>
-<a name="hackertray" class="anchor" href="#hackertray"><span class="octicon octicon-link"></span></a>HackerTray</h1>
+<a name="reddittray" class="anchor" href="#reddittray"><span class="octicon octicon-link"></span></a>RedditTray</h1>
 
-<p>HackerTray is a simple <a href="https://news.ycombinator.com/">Hacker News</a> Linux application
-that lets you view top HN stories in your System Tray. It relies on appindicator, so
+<p>RedditTray is a simple <a href="https://reddit.com/r/python">Reddit</a> Linux application
+that lets you view /r/python links in your System Tray. It currently supports python only 
+however I will add an option to add other subreddits as well It relies on appindicator, so
 it is not guaranteed to work on all systems. It also provides a Gtk StatusIcon fallback
 in case AppIndicator is not available.</p>
 
-<p>The inspiration for this came from <a href="http://hackerbarapp.com">Hacker Bar</a>, which is 
-Mac-only. I tried to port it to <code>node-webkit</code>, but had to do it in Python instead
-because nw doesn't support AppIndicators yet.</p>
+<p>The inspiration for this came from <a href="https://github.com/captn3m0/hackertray">hackertray</a>, which is 
+for Hacker news. I just ported that code for reddit.</p>
 
 <h2>
 <a name="screenshot" class="anchor" href="#screenshot"><span class="octicon octicon-link"></span></a>Screenshot</h2>
 
-<p><img src="http://i.imgur.com/63l3qXV.png" alt="HackerTray Screenshot in elementaryOS"></p>
+<p><img src="http://i.imgur.com/gzIXbzW.png" alt="RedditTray Screenshot in Ubuntu"></p>
 
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
 
-<p>HackerTray is distributed as a python package. Do the following to install:</p>
+<p>RedditTray is distributed as a python package. Do the following to install:</p>
 
-<div class="highlight highlight-sh"><pre>sudo pip install hackertray
+<div class="highlight highlight-sh"><pre>sudo pip install reddittray
 OR
-sudo easy_install hackertray
+sudo easy_install reddittray
 OR
 <span class="c">#Download Source and cd to it</span>
-sudo setup.py install
+sudo python setup.py install
 </pre></div>
 
-<p>After that, you can run <code>hackertray</code> from anywhere and it will run. You can
+<p>After that, you can run <code>reddittray</code> from anywhere and it will run. You can
 now add it to your OS dependent session autostart method. In Ubuntu, you can
 access it via: </p>
 
@@ -70,25 +67,24 @@ access it via: </p>
 (OR)</li>
 <li>System &gt; Preferences &gt; Startup Applications </li>
 </ol><p>depending on your Ubuntu Version. Or put it in <code>~/.config/openbox/autostart</code> 
-if you are running OpenBox. <a href="http://imgur.com/mnhIzDK">Here</a> is how the 
-configuration should look like in Ubuntu and its derivatives.</p>
+if you are running OpenBox. </p>
 
 <h3>
 <a name="upgrade" class="anchor" href="#upgrade"><span class="octicon octicon-link"></span></a>Upgrade</h3>
 
-<p>The latest stable version is always the one <a href="https://pypi.python.org/pypi/hackertray/">available on pip</a>.
-You can check which version you have installed with <code>pip freeze | grep hackertray</code>.</p>
+<p>The latest stable version is always the one <a href="https://pypi.python.org/pypi/reddittray/">available on pip</a>.
+You can check which version you have installed with <code>pip freeze | grep reddittray</code>.</p>
 
-<p>To upgrade, run <code>pip install -U hackertray</code>. In some cases (Ubuntu), you might
+<p>To upgrade, run <code>pip install -U reddittray</code>. In some cases (Ubuntu), you might
 need to clear the pip cache before upgrading:</p>
 
-<p><code>sudo rm -rf /tmp/pip-build-root/hackertray</code></p>
+<p><code>sudo rm -rf /tmp/pip-build-root/reddittray</code></p>
 
 <h2>
 <a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
 
 <ol>
-<li>Minimalist Approach to HN</li>
+<li>Minimalist Approach to Reddit</li>
 <li>Opens links in your default browser</li>
 <li>Remembers which links you opened</li>
 <li>Shows Points/Comment count in a simple format</li>
@@ -97,42 +93,45 @@ need to clear the pip cache before upgrading:</p>
 
 <ul>
 <li>Auto Start</li>
-<li>Try to convert right click to comments link</li>
+<li>Try to convert right click to reddit link</li>
 </ul><h2>
 <a name="author-information" class="anchor" href="#author-information"><span class="octicon octicon-link"></span></a>Author Information</h2>
 
 <ul>
-<li>Abhay Rana (<a href="mailto:me@captnemo.in">me@captnemo.in</a>)</li>
+<li>Muhammad Yasoob Khalid (<a href="mailto:yasoob.khld@gmail.com">yasoob.khld@gmail.com</a>)</li>
 </ul><h2>
-<a name="donating" class="anchor" href="#donating"><span class="octicon octicon-link"></span></a>Donating</h2>
-
-<p>Support this project and <a href="https://www.gittip.com/captn3m0/">others by captn3m0</a> via <a href="https://www.gittip.com/captn3m0/">gittip</a>.</p>
-
-<p><a href="https://www.gittip.com/captn3m0/"><img src="https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png" alt="Support via Gittip"></a></p>
-
-<h2>
 <a name="licence" class="anchor" href="#licence"><span class="octicon octicon-link"></span></a>Licence</h2>
 
 <p>Licenced under the MIT Licence</p>
         </section>
 
-        <footer>
-          Hackertray is maintained by <a href="https://github.com/captn3m0">captn3m0</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
+        <aside id="sidebar">
+          <a href="https://github.com/yasoob/reddittray/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/yasoob/reddittray/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
 
-                  <script type="text/javascript">
+          <p class="repo-owner"><a href="https://github.com/yasoob/reddittray"></a> is maintained by <a href="https://github.com/yasoob">yasoob</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+            <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
           <script type="text/javascript">
             try {
-              var pageTracker = _gat._getTracker("UA-5922129-12");
+              var pageTracker = _gat._getTracker("UA-46059954-1");
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
 
-      </div>
-    </div>
   </body>
 </html>
