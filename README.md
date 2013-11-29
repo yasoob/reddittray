@@ -1,32 +1,32 @@
-HackerTray
+RedditTray
 ==========
 
-HackerTray is a simple [Hacker News](https://news.ycombinator.com/) Linux application
-that lets you view top HN stories in your System Tray. It relies on appindicator, so
+RedditTray is a simple [Reddit](https://reddit.com/r/python) Linux application
+that lets you view /r/python links in your System Tray. It currently supports python only 
+however I will add an option to add other subreddits as well It relies on appindicator, so
 it is not guaranteed to work on all systems. It also provides a Gtk StatusIcon fallback
 in case AppIndicator is not available.
 
-The inspiration for this came from [Hacker Bar](http://hackerbarapp.com), which is 
-Mac-only. I tried to port it to `node-webkit`, but had to do it in Python instead
-because nw doesn't support AppIndicators yet.
+The inspiration for this came from [hackertray](https://github.com/captn3m0/hackertray), which is 
+for Hacker news. I just ported that code for reddit.
 
 ##Screenshot
 
-![HackerTray Screenshot in elementaryOS](http://i.imgur.com/63l3qXV.png)
+![RedditTray Screenshot in Ubuntu](http://i.imgur.com/gzIXbzW.png)
 
 ##Installation
-HackerTray is distributed as a python package. Do the following to install:
+RedditTray is distributed as a python package. Do the following to install:
 
 ``` sh
-sudo pip install hackertray
+sudo pip install reddittray
 OR
-sudo easy_install hackertray
+sudo easy_install reddittray
 OR
 #Download Source and cd to it
 sudo python setup.py install
 ```
 
-After that, you can run `hackertray` from anywhere and it will run. You can
+After that, you can run `reddittray` from anywhere and it will run. You can
 now add it to your OS dependent session autostart method. In Ubuntu, you can
 access it via: 
 
@@ -35,17 +35,16 @@ access it via:
 2. System > Preferences > Startup Applications 
 
 depending on your Ubuntu Version. Or put it in `~/.config/openbox/autostart` 
-if you are running OpenBox. [Here](http://imgur.com/mnhIzDK) is how the 
-configuration should look like in Ubuntu and its derivatives.
+if you are running OpenBox. 
 
 ###Upgrade
-The latest stable version is always the one [available on pip](https://pypi.python.org/pypi/hackertray/).
-You can check which version you have installed with `pip freeze | grep hackertray`.
+The latest stable version is always the one [available on pip](https://pypi.python.org/pypi/reddittray/).
+You can check which version you have installed with `pip freeze | grep reddittray`.
 
-To upgrade, run `pip install -U hackertray`. In some cases (Ubuntu), you might
+To upgrade, run `pip install -U reddittray`. In some cases (Ubuntu), you might
 need to clear the pip cache before upgrading:
 
-`sudo rm -rf /tmp/pip-build-root/hackertray`
+`sudo rm -rf /tmp/pip-build-root/reddittray`
 
 ##Features
 1. Minimalist Approach to HN
@@ -55,18 +54,10 @@ need to clear the pip cache before upgrading:
 
 ##To-Do
 - Auto Start
-- Try to convert right click to comments link
+- Try to convert right click to reddit link
 
 ##Author Information
-- Abhay Rana (<me@captnemo.in>)
-
-## Donating
-Support this project and [others by captn3m0][gittip] via [gittip][].
-
-[![Support via Gittip][gittip-badge]][gittip]
-
-[gittip-badge]: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png
-[gittip]: https://www.gittip.com/captn3m0/
+- Muhammad Yasoob Khalid (<yasoob.khld@gmail.com>)
 
 ##Licence
 Licenced under the MIT Licence
